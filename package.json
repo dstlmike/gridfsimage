@@ -11,7 +11,7 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "hi": "cd ./client/node_modules/react-scripts/scripts && node start.js",
+    "hi": "node ./client/node_modules/react-scripts/scripts/start.js",
  
     "start": "npm run hi && npm run start:server"
   },
