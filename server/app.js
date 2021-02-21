@@ -31,7 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public'))); //, '/client/public', '/server/public')); // __dirname + 'client/public'})));
-//app.use(express.static(path.join('server', 'public'); //path.join(__dirname, '/client/public')));
+app.use(express.static(path.join(__dirname, 'client/public'))); //path.join(__dirname, '/client/public')));
+app.use(express.static(path.join(__dirname, 'server/public'))); //path.join(__dirname, '/client/public')));
 
 
 const mongoose = require('mongoose');
