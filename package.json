@@ -11,8 +11,8 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "hi": "node ./client/node_modules/react-scripts/scripts/start.js",
- 
+    "hi": "cd ./client && node ./node_modules/react-scripts/scripts/start.js",
+    "starthi": "node ./client/node_modules/react-scripts/bin/react-scripts.js start",
     "start": "npm run hi && npm run start:server"
   },
   "author": "Tarique Ejaz",
