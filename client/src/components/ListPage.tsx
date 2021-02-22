@@ -16,7 +16,7 @@ class ListPage extends PureComponent<{}, ListState> {
     }
 
     componentDidMount = () => {
-        axios.get('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/uploads')
+        axios.get('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/uploads/')
             .then(response => {
                 this.setState({ imageList: response.data.images });
 
