@@ -14,14 +14,14 @@ class App extends PureComponent<{}> {
           <p className="Header__Title">GridFS - Upload and List Files</p>
 
           <div className="Menu">
-            <Link to='/'>
+            <Link to='/uploads'>
               <img
                 src={Upload}
                 alt="upload"
                 className="Menu__Item"
               />
             </Link>
-            <Link to='/list'>
+            <Link to='/uploads/list'>
               <img
                 src={List}
                 alt="list"
@@ -33,9 +33,9 @@ class App extends PureComponent<{}> {
 
         <div className="Routes">
           <Switch>
-            <Route exact path='/' component={UploadPage} />
-            <Route exact path='/list' component={ListPage} />
-            <Redirect from='/**' to='/' />
+            <Route exact path='/uploads' component={UploadPage} />
+            <Route exact path='/uploads/list' component={ListPage} />
+            <Redirect from='/uploads/**' to='/uploads' />
           </Switch>
         </div>
       </div>
