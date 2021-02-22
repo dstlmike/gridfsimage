@@ -73,8 +73,10 @@ const storage = new GridFsStorage({
 const upload = multer({ storage });
 
 app.use('/uploads/', imageRouter(upload));
+app.use('/uploads', imageRouter(upload));
+
 app.get('/uploads', (req, res) => {
-var html = fs.readFileSync("index");
+var html = fs.readFileSync("/server/views/index");
 res.render(html);
 });
 // catch 404 and forward to error handler
