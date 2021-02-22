@@ -38,7 +38,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
   //  }
 
     fetchRecent = () => {
-        axios.get('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/recent')
+        axios.get('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/uploads/recent')
             .then((response) => {
                 this.setState({ recentImage: response.data.image });
             })
@@ -54,7 +54,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
         formData.append('caption', this.state.caption);
         formData.append('file', this.state.uploadedImage);
 
-        axios.post('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/', formData)
+        axios.post('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/uploads/', formData)
             .then((response) => {
                 response.data.success ? alert('File successfully uploaded') : alert('File already exists');
                 this.fetchRecent();
@@ -74,7 +74,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
                         </div>
 
                         <img
-                            src={'http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/image/' + this.state.recentImage.filename}
+                            src={'http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/uploads/image/' + this.state.recentImage.filename}
                             alt="recent-image"
                             className="Recent__Image"
                        />
