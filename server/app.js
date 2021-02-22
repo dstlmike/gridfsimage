@@ -15,7 +15,7 @@ const jade = require('jade');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views')); //, 'server/views', 'client/views');
+app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, '/server/views/')]); //, 'server/views', 'client/views');
 //path.join(__dirname, 'server/views'),
 //path.join(__dirname, 'client/views'),
 //]);
