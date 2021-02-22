@@ -11,11 +11,11 @@ const crypto = require('crypto');
 const cors = require('cors');
 const fs = require('fs'); // PUBLIC_URL = process.env.PUBLIC_URL || 'http://localhost:' + process.env.PORT + '/client/public' || http://localhost:' + process.env.PORT + '/server/public';
 const imageRouter = require('./routes/image');
-
+const jade = require('jade');
 const app = express();
 
 // view engine setup
-app.set(path.join(__dirname, 'views')); //, 'server/views', 'client/views');
+app.set('views', path.join(__dirname, 'views')); //, 'server/views', 'client/views');
 //path.join(__dirname, 'server/views'),
 //path.join(__dirname, 'client/views'),
 //]);
