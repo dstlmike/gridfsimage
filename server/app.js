@@ -76,7 +76,7 @@ app.use('/uploads/', imageRouter(upload));
 app.use('/uploads', imageRouter(upload));
 app.use('/', imageRouter(upload));
 
-app.get('/uploads', (req, res) => {
+app.get('/', (req, res) => {
 var html = fs.readFileSync("/server/views/index");
 res.render(html);
 });
