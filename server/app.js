@@ -72,7 +72,7 @@ const storage = new GridFsStorage({
 
 const upload = multer({ storage });
 
-//app.use('/', imageRouter(upload));
+app.use('/uploads/', imageRouter(upload));
 app.get('/uploads', (req, res) => {
 var html = fs.readFileSync("index");
 res.render(html);
